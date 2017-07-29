@@ -7,7 +7,6 @@ import {HttpModule} from "@angular/http";
 import { FormComponent} from "./form.component";
 import { FormService} from "./form.service";
 import { FormRoutingModule} from "./form-routing";
-import {CommonModule} from "@angular/common";
 
 
 @NgModule({
@@ -15,9 +14,7 @@ import {CommonModule} from "@angular/common";
     FormRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule,
-    CommonModule
-  ],
+    HttpModule],
   declarations: [ FormComponent],
   providers: [ FormService ]
 })

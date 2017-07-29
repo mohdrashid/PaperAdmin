@@ -11,7 +11,7 @@
       <ul class="user-menu">
         <li class="dropdown pull-right">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-             User <span class="caret"></span></a>
+            User <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#"><i class="fa fa-fw fa-user"></i> Profile</a></li>
             <li><a href="#"><i class="fa fa-fw fa-cogs"></i> Settings</a></li>
@@ -39,17 +39,17 @@
       </a>
       <ul class="children collapse" id="sub-item-1">
         <li>
-          <a routerLinkActive="active" [routerLink]="['/main']">
+          <a routerLinkActive="active" [routerLink]="['/widget/main']">
             <i class="fa fa-fw fa-cogs"></i> Main
           </a>
         </li>
         <li>
-          <a routerLinkActive="active" [routerLink]="['/table']">
+          <a routerLinkActive="active" [routerLink]="['/widget/table']">
             <i class="fa fa-fw fa-table"></i> Table
           </a>
         </li>
         <li>
-          <a routerLinkActive="active" [routerLink]="['/charts']">
+          <a routerLinkActive="active" [routerLink]="['/widget/chart']">
             <i class="fa fa-fw fa-bar-chart"></i> Charts
           </a>
         </li>
@@ -66,6 +66,10 @@
   </div>
 </div><!--/.sidebar-->
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
-<!-- Main content -->
-    <router-outlet></router-outlet>
+  <!-- Main content -->
+  <div class="row">
+    <breadcrumb></breadcrumb>
+  </div><!--/.row-->
+
+  <router-outlet></router-outlet>
 </div>

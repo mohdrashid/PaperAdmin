@@ -1,0 +1,4 @@
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-fw fa-home"></i></a></li>
+      <li *ngFor="let item of path; index as i" class="todo-list-item" [id]="i" ><a routerLinkActive="active" href="javascript:void(0)" (click)="route(i)">{{href[i]}}</a></li>
+    </ol>

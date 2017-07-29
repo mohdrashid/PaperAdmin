@@ -1,27 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import {LocationStrategy, HashLocationStrategy, CommonModule, PathLocationStrategy} from '@angular/common';
 
 import { AppComponent } from './app.component';
 
 // Routing Module
 import { AppRoutingModule } from './app.routing';
-import { FullLayoutComponent } from './layout/full-layout.component';
+import { FullLayoutComponent} from './layout/full-layout.component';
+import {BreadCrumb} from "./components/breadcrumb/breadcrumb.component";
 
 @NgModule({
   imports: [
     BrowserModule,
-    AppRoutingModule
-
+    AppRoutingModule,
+    CommonModule
   ],
-
   declarations: [
     FullLayoutComponent,
-AppComponent
+AppComponent,BreadCrumb
   ],
   providers: [{
     provide: LocationStrategy,
-    useClass: HashLocationStrategy
+    useClass: PathLocationStrategy
   }],
   bootstrap: [ AppComponent ]
 })

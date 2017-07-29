@@ -26,23 +26,36 @@ export const routes: Routes = [
     children: [
       {
         path: 'dashboard',
-        loadChildren: './dashboard/dashboard.module#DashboardModule'
+        loadChildren: './dashboard/dashboard.module#DashboardModule',
+        data:{
+          title2:"Dashboard"
+        }
       },
       {
         path: 'form',
         loadChildren: './form/form.module#FormModule'
       },
       {
-        path: 'main',
-        loadChildren: './widgets/main/main.module#MainWidgetModule'
-      },
-      {
-        path: 'table',
-        loadChildren: './widgets/tables/tables.module#TablesWidgetModule'
-      },
-      {
-        path: 'charts',
-        loadChildren: './widgets/charts/charts.module#ChartsWidgetModule'
+        path:'widget',
+        children:[
+          {
+            path: '',
+            pathMatch: 'full',
+            redirectTo:'widget/main'
+          },
+          {
+            path: 'main',
+            loadChildren: './widgets/main/main.module#MainWidgetModule'
+          },
+          {
+            path: 'table',
+            loadChildren: './widgets/tables/tables.module#TablesWidgetModule'
+          },
+          {
+            path: 'chart',
+            loadChildren: './widgets/charts/charts.module#ChartsWidgetModule'
+          }
+        ]
       }
 
     ]

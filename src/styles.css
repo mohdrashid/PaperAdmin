@@ -15,3 +15,7 @@ table tr td, table th{
 .sidebar ul.nav ul.children li a.active {
   color: #ececec !important;
 }
+
+.todo-list-item{
+  list-style: none;
+}
