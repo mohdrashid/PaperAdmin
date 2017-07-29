@@ -1,0 +1,25 @@
+
+<div class="panel panel-default">
+  <div class="panel-body easypiechart-panel">
+    <h4>{{properties['label']}}</h4>
+    <div class="progressBarText">
+      {{((properties['current']/properties['max'])*100).toFixed(1)}}%
+    </div>
+    <div class="progressive-pieChart">
+      <round-progress
+        [current]="properties['current']"
+        [max]="properties['max']"
+        [color]="properties['color']"
+        [background]="'#eaeaea'"
+        [radius]=100
+        [stroke]="10"
+        [semicircle]="false"
+        [rounded]="true"
+        [clockwise]="true"
+        [responsive]="true"
+        [duration]="800"
+        [animation]="'easeInOutQuart'"
+        [animationDelay]="100"
+      ></round-progress>
+    </div>      </div>
+</div>

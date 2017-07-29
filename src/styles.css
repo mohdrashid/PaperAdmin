@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/css/bootstrap.css";
+@import "assets/css/bootstrap-table.css";
+@import "assets/css/datepicker3.css";
+@import "assets/css/styles.css";
+@import "assets/css/font-awesome.min.css";
+
+.datepicker table{
+  width: 100% !important;
+}
+
+
+

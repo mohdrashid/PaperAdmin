@@ -1,0 +1,20 @@
+<div class="panel">
+  <div class="panel-heading" [style.background]="listView['color']">
+    <i [class]="listView['icon']" style="margin-right: 10px"></i>{{listView['label']}}
+    <div class="pull-right"><i class="fa fa-pencil fa-fw" (click)="onEditClickListener($event)"></i> <i class="fa fa-remove fa-fw" (click)="onDeleteClickListener()"></i></div>
+  </div>
+  <input type="text" class="form-control searchBoxListView" placeholder="Search...." [(ngModel)]="search" (keyup)="onChangeListener($event)">
+  <div class="panel-body">
+    <ul class="todo-list">
+      <li *ngFor="let item of subData; index as i" class="todo-list-item" [id]="i" >{{item}}</li>
+    </ul>
+  </div>
+  <div class="panel-footer">
+    <div class="input-group">
+      <input type="text" class="form-control input-md" placeholder="Add" [(ngModel)]="value">
+      <span class="input-group-btn">
+        <button class="btn btn-success btn-md" id="btn-todo" (click)="onAddClickListener()">{{opType}}</button>
+      </span>
+    </div>
+  </div>
+</div>

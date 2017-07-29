@@ -1,0 +1,63 @@
+<div class="row">
+  <ol class="breadcrumb">
+    <li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+    <li class="active">Icons</li>
+  </ol>
+</div><!--/.row-->
+
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Dashboard</h1>
+  </div>
+</div><!--/.row-->
+
+<div class="row">
+  <div class="col-xs-12 col-md-6 col-sm-12 col-lg-3">
+    <statsCard [data]="card1"></statsCard>
+  </div>
+  <div class="col-xs-12 col-md-6 col-lg-3">
+    <statsCard [data]="card2"></statsCard>
+  </div>
+  <div class="col-xs-12 col-md-6 col-lg-3">
+    <statsCard [data]="card3"></statsCard>
+  </div>
+  <div class="col-xs-12 col-md-6 col-lg-3">
+    <statsCard [data]="card4"></statsCard>
+  </div>
+</div><!--/.row-->
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Site Traffic Overview</div>
+      <div class="panel-body">
+        <div class="canvas-wrapper" >
+          <canvas baseChart style="width: 791px; height: 263px;" width="1582" height="446"
+                  [datasets]="lineChartData"
+                  [labels]="lineChartLabels"
+                  [chartType]="lineChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"
+          ></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/.row-->
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <pieChart [data]="pbar1"></pieChart>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <pieChart [data]="pbar2"></pieChart>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <pieChart [data]="pbar3"></pieChart>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <pieChart [data]="pbar4"></pieChart>
+  </div>
+
+</div><!--/.row-->
+

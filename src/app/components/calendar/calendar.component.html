@@ -1,0 +1,8 @@
+<div class="panel" [style.background]="properties['color']" [style.color]="properties['font']">
+  <div class="panel-heading dark-overlay">
+    <i class="{{properties['icon']}}" style="margin-right: 10px"></i>{{properties['label']}}
+  </div>
+  <div class="panel-body">
+    <div id="{{properties['id']}}" (click)="onCalendarClick($event)"></div>
+  </div>
+</div>
