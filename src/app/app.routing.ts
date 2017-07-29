@@ -35,6 +35,10 @@ export const routes: Routes = [
       {
         path: 'table',
         loadChildren: './widgets/tables/tables.module#TablesWidgetModule'
+      },
+      {
+        path: 'charts',
+        loadChildren: './widgets/charts/charts.module#ChartsWidgetModule'
       }
 
     ]

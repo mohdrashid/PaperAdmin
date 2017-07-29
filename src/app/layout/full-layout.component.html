@@ -33,8 +33,8 @@
     <li><a routerLinkActive="active" [routerLink]="['/form']"><i class="fa fa-list fa-fw"></i> Form</a></li>
 
     <li class="parent ">
-      <a href="#">
-        <span data-toggle="collapse" href="#sub-item-1"><i class="fa fa-fw fa-chevron-circle-down"></i></span> Widgets
+      <a data-toggle="collapse" href="#sub-item-1">
+        <i class="fa fa-fw fa-chevron-circle-down"></i> Widgets
       </a>
       <ul class="children collapse" id="sub-item-1">
         <li>
@@ -48,8 +48,8 @@
           </a>
         </li>
         <li>
-          <a class="" href="#">
-             Sub Item 3
+          <a routerLinkActive="active" [routerLink]="['/charts']">
+            <i class="fa fa-fw fa-bar-chart"></i> Charts
           </a>
         </li>
       </ul>
