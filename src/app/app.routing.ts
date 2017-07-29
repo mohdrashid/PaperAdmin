@@ -14,6 +14,10 @@ export const routes: Routes = [
     loadChildren: './login/login.module#LoginModule'
   },
   {
+    path: 'register',
+    loadChildren: './register/register.module#RegisterModule'
+  },
+  {
     path: '',
     component: FullLayoutComponent,
     data: {

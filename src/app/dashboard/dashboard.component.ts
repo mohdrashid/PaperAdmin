@@ -11,16 +11,17 @@ import {PieChart} from "../components/pieChart/pieChart";
 })
 export class DashboardComponent {
   //Card
-  public card1:StatsCard={color:"#1ebfae",icon:"fa-users",label:"Users",data:2};
-  public card2:StatsCard={color:"#30a5ff",icon:"fa-cogs",label:"Devices",data:2};
-  public card3:StatsCard={color:"red",icon:"fa-cogs",label:"sfdsf",data:2};
-  public card4:StatsCard={color:"red",icon:"fa-cog",label:"sfdsf",data:2};
+
+  public card1:StatsCard={color:"#1ebfae",icon:"fa-users",label:"Users",data:50};
+  public card2:StatsCard={color:"#30a5ff",icon:"fa-cogs",label:"Items",data:80};
+  public card3:StatsCard={color:"#ffb53e",icon:"fa-cogs",label:"Orders",data:90};
+  public card4:StatsCard={color:"#f9243f",icon:"fa-cog",label:"Delivered",data:2};
 
   //ProgressBars
-  public pbar1:PieChart={color:"blue",max:100,label:"Load",current:2};
-  public pbar2:PieChart={color:"red",max:100,label:"Traffic",current:20};
-  public pbar3:PieChart={color:"yellow",max:100,label:"Traffic",current:50};
-  public pbar4:PieChart={color:"green",max:100,label:"Traffic",current:57};
+  public pbar1:PieChart={color:"#1ebfae",max:100,label:"Load",current:2};
+  public pbar2:PieChart={color:"#30a5ff",max:100,label:"Traffic",current:20};
+  public pbar3:PieChart={color:"#ffb53e",max:100,label:"Traffic",current:50};
+  public pbar4:PieChart={color:"#f9243f",max:100,label:"Traffic",current:57};
 
 
   // lineChart

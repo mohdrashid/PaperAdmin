@@ -7,14 +7,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><span>Spark</span>Admin</a>
+      <a class="navbar-brand" href="#"><span>Paper </span>Admin</a>
       <ul class="user-menu">
         <li class="dropdown pull-right">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> User <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+             User <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Profile</a></li>
-            <li><a href="#"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg> Settings</a></li>
-            <li><a href="#"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Logout</a></li>
+            <li><a href="#"><i class="fa fa-fw fa-user"></i> Profile</a></li>
+            <li><a href="#"><i class="fa fa-fw fa-cogs"></i> Settings</a></li>
+            <li><a href="#"><i class="fa fa-fw fa-lock"></i> Logout</a></li>
           </ul>
         </li>
       </ul>
@@ -56,9 +57,13 @@
     </li>
     <li role="presentation" class="divider"></li>
     <li><a routerLinkActive="active" [routerLink]="['/login']"><i class="fa fa-user fa-fw"></i> Login</a></li>
+    <li><a routerLinkActive="active" [routerLink]="['/register']"><i class="fa fa-users fa-fw"></i> Register</a></li>
 
   </ul>
-  <div class="attribution">Template by <a href="http://www.medialoot.com/item/lumino-admin-bootstrap-template/">Medialoot</a><br/><a href="http://www.glyphs.co" style="color: #333;">Icons by Glyphs</a></div>
+  <div class="attribution">Some styles adopted from
+    <a href="http://www.medialoot.com/item/lumino-admin-bootstrap-template/">Medialoot</a><br/>
+
+  </div>
 </div><!--/.sidebar-->
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 <!-- Main content -->
