@@ -107,7 +107,8 @@ export class ListViewCRUDComponent {
     }
   }
 
-  onEditClickListener($event){
+  onEditClickListener(index){
+    this.selectedIndex=index;
     this.value=this.items[this.selectedIndex];
     this.opType="Edit";
   }
@@ -120,7 +121,8 @@ export class ListViewCRUDComponent {
     return this.items[index]
   }
 
-  onDeleteClickListener(){
+  onDeleteClickListener(index){
+    this.selectedIndex=index;
     if(this.listView.onDelete&&this.listView.onDelete(this.get(this.selectedIndex))){
       this.delete(this.selectedIndex);
     }

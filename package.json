@@ -2,6 +2,15 @@
   "name": "PaperAdmin",
   "version": "0.0.0",
   "author": "Mohammed Rashid",
+  "description": "A flat Angular JS 2/4 Dashboard",
+  "keywords": [
+    "angular",
+    "angular2",
+    "angular4",
+    "dashboard",
+    "angularjs",
+    "javascript"
+  ],
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -11,7 +20,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^4.0.0",
     "@angular/common": "^4.0.0",
@@ -25,8 +34,8 @@
     "angular-svg-round-progressbar": "^1.1.0",
     "chart.js": "^2.6.0",
     "core-js": "^2.4.1",
-    "jquery": "^3.2.1",
     "ng2-charts": "^1.6.0",
+    "ng2-smart-table": "^1.2.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },

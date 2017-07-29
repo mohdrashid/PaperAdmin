@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "admin"
+    "name": "PaperAdmin"
   },
   "apps": [
     {
@@ -25,10 +25,7 @@
         "assets/js/jquery-1.11.1.min.js",
         "assets/js/bootstrap.min.js",
         "assets/js/Chart.min.js",
-        "assets/js/bootstrap-datepicker.js",
-        "assets/js/bootstrap-table.js",
-        "assets/js/final.js"
-
+        "assets/js/bootstrap-datepicker.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 @import "assets/css/bootstrap.css";
-@import "assets/css/bootstrap-table.css";
 @import "assets/css/datepicker3.css";
 @import "assets/css/styles.css";
 @import "assets/css/font-awesome.min.css";
@@ -9,5 +8,10 @@
   width: 100% !important;
 }
 
+table tr td, table th{
+  font-size:1.2rem !important;
+}
 
-
+.sidebar ul.nav ul.children li a.active {
+  color: #ececec !important;
+}

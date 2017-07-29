@@ -52,3 +52,9 @@
 .searchBoxListView{
   border-radius: 0px;
 }
+
+ul li a{
+  text-decoration: none;
+}
+ul li div {display: none;}
+ul li:hover div {display: inline;}

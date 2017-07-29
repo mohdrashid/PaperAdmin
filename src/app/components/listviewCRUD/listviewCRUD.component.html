@@ -1,12 +1,17 @@
 <div class="panel">
   <div class="panel-heading" [style.background]="listView['color']">
     <i [class]="listView['icon']" style="margin-right: 10px"></i>{{listView['label']}}
-    <div class="pull-right"><i class="fa fa-pencil fa-fw" (click)="onEditClickListener($event)"></i> <i class="fa fa-remove fa-fw" (click)="onDeleteClickListener()"></i></div>
   </div>
   <input type="text" class="form-control searchBoxListView" placeholder="Search...." [(ngModel)]="search" (keyup)="onChangeListener($event)">
   <div class="panel-body">
     <ul class="todo-list">
-      <li *ngFor="let item of subData; index as i" class="todo-list-item" [id]="i" >{{item}}</li>
+      <li *ngFor="let item of subData; index as i" class="todo-list-item" [id]="i" >
+        {{item}}
+        <div class="pull-right action-buttons">
+          <a href="javascript:void(0)" (click)="onEditClickListener(i)"><i class="fa fa-pencil fa-fw"></i> </a>
+          <a href="javascript:void(0)" (click)="onDeleteClickListener(i)"><i class="fa-fw fa fa-remove"></i> </a>
+        </div>
+      </li>
     </ul>
   </div>
   <div class="panel-footer">
