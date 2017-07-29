@@ -1,6 +1,7 @@
 {
-  "name": "admin",
+  "name": "PaperAdmin",
   "version": "0.0.0",
+  "author": "Mohammed Rashid",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
