@@ -2,7 +2,6 @@
  * Created by mohma on 7/26/2017.
  */
 import { Component } from '@angular/core';
-import {ListView} from "../../components/listviewCRUD/listviewCRUD";
 
 @Component({
   templateUrl: './tables.html',

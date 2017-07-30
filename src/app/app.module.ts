@@ -7,18 +7,19 @@ import { AppComponent } from './app.component';
 // Routing Module
 import { AppRoutingModule } from './app.routing';
 import { FullLayoutComponent} from './layout/full-layout.component';
-import {Ng2AutoBreadCrumbComponent} from 'ng2-auto-breadcrumb';
+import {Ng2AutoBreadCrumb} from "ng2-auto-breadcrumb";
+
 
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    Ng2AutoBreadCrumb
   ],
   declarations: [
     FullLayoutComponent,
-    AppComponent,
-    Ng2AutoBreadCrumbComponent
+    AppComponent
   ],
   providers: [{
     provide: LocationStrategy,
