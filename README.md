@@ -5,7 +5,7 @@ easy. It features custom components such as calendars, list views with CRUD(Crea
 cards to display relevant information.
 
 ## Demo
-https://mohdrashid.github.io/PaperAdmin/dashboard
+https://mohdrashid.github.io/PaperAdmin
 
 ## Development server
 
