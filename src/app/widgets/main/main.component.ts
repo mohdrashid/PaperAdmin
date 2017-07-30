@@ -2,7 +2,7 @@
  * Created by mohma on 7/26/2017.
  */
 import { Component } from '@angular/core';
-import {ListView} from "../../components/listviewCRUD/listviewCRUD";
+import {ListViewCRUDProperty} from "ng2-listview-crud";
 
 @Component({
   templateUrl: './main.component.html',
@@ -18,7 +18,7 @@ export class MainWidgetComponent {
   public dangerColor="#f9243f";
   public fontColor="#ececec";
 
-  public listView:ListView= {
+  public listView:ListViewCRUDProperty= {
     label: "CRUD ListView",
     icon: "fa fa-list",
     color: "#ffb53e",

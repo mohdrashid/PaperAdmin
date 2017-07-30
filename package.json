@@ -34,7 +34,9 @@
     "angular-svg-round-progressbar": "^1.1.0",
     "chart.js": "^2.6.0",
     "core-js": "^2.4.1",
+    "ng2-auto-breadcrumb": "^1.0.9",
     "ng2-charts": "^1.6.0",
+    "ng2-listview-crud": "^1.0.1",
     "ng2-smart-table": "^1.2.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
