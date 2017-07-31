@@ -1,15 +1,28 @@
 /**
  * Created by mohma on 7/26/2017.
  */
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {StatsCard} from "../components/statsCard/statsCard";
 import {PieChart} from "../components/pieChart/pieChart";
 
 @Component({
   templateUrl: './dashboard.component.html',
-  selector:'dashboard'
+  selector:'dashboard',
+  styleUrls:['./dashboard.scss']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit{
+  public chartHeight=35;
+
+  public ChartOptions:any = {
+    scaleShowVerticalLines: false,
+    responsive: true,
+    mainAspectRatio:false
+  };
+
+  ngOnInit(): void {
+
+  }
+
   //Card
 
   public card1:StatsCard={color:"#1ebfae",icon:"fa-users",label:"Users",data:50};
@@ -20,8 +33,8 @@ export class DashboardComponent {
   //ProgressBars
   public pbar1:PieChart={color:"#1ebfae",max:100,label:"Load",current:2};
   public pbar2:PieChart={color:"#30a5ff",max:100,label:"Traffic",current:20};
-  public pbar3:PieChart={color:"#ffb53e",max:100,label:"Traffic",current:50};
-  public pbar4:PieChart={color:"#f9243f",max:100,label:"Traffic",current:57};
+  public pbar3:PieChart={color:"#ffb53e",max:100,label:"Users",current:50};
+  public pbar4:PieChart={color:"#f9243f",max:100,label:"RAM",current:57};
 
 
   // lineChart
@@ -32,6 +45,7 @@ export class DashboardComponent {
   public lineChartLabels:Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   public lineChartType:string = 'line';
 
+
   // events
   public chartClicked(e:any):void {
     console.log(e);
@@ -39,11 +53,6 @@ export class DashboardComponent {
 
   public chartHovered(e:any):void {
     console.log(e);
-  }
-
-
-  constructor() {
-
   }
 }
 

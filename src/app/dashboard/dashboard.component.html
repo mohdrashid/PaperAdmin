@@ -19,7 +19,8 @@
       <div class="panel-heading">Site Traffic Overview</div>
       <div class="panel-body">
         <div class="canvas-wrapper" >
-          <canvas baseChart style="width: 791px; height: 263px;" width="1582" height="500"
+          <canvas baseChart style="min-height: 300px;width: 100%; height: 50vh"
+                  [options]="ChartOptions"
                   [datasets]="lineChartData"
                   [labels]="lineChartLabels"
                   [chartType]="lineChartType"
