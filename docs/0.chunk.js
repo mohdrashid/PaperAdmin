@@ -1,5 +1,109 @@
 webpackJsonp([0],{
 
+/***/ "../../../../../src/app/components/ng2-newslist/ng2newslist.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngFor=\"let item of items;index as i\" class=\"article border-bottom\">\r\n<div class=\"col-xs-12\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xs-2 col-md-2 date\">\r\n      <div class=\"large\">{{item['large']}}</div>\r\n      <div class=\"text-muted\">{{item['small']}}</div>\r\n    </div>\r\n    <div class=\"col-xs-10 col-md-10\">\r\n      <h4><a href=\"{{item['link']}}\">{{item['title']}}</a></h4>\r\n      <p>{{item['content']}}</p>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"clear\"></div>\r\n</div><!--End .article-->\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/ng2-newslist/ng2newslist.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/ng2-newslist/ng2newslist.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ng2NewsListComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+/**
+ * Created by mohma on 7/31/2017.
+ */
+
+var Ng2NewsListComponent = (function () {
+    function Ng2NewsListComponent() {
+    }
+    return Ng2NewsListComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('data'),
+    __metadata("design:type", Object)
+], Ng2NewsListComponent.prototype, "items", void 0);
+Ng2NewsListComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'ng2-news-list',
+        template: __webpack_require__("../../../../../src/app/components/ng2-newslist/ng2newslist.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/ng2-newslist/ng2newslist.component.scss")]
+    })
+], Ng2NewsListComponent);
+
+//# sourceMappingURL=ng2newslist.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/ng2-newslist/ng2newslist.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ng2newslist_component__ = __webpack_require__("../../../../../src/app/components/ng2-newslist/ng2newslist.component.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ng2NewsList; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+/**
+ * Created by mohma on 7/31/2017.
+ */
+
+
+
+var Ng2NewsList = (function () {
+    function Ng2NewsList() {
+    }
+    return Ng2NewsList;
+}());
+Ng2NewsList = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"]
+        ],
+        declarations: [__WEBPACK_IMPORTED_MODULE_2__ng2newslist_component__["a" /* Ng2NewsListComponent */]],
+        exports: [__WEBPACK_IMPORTED_MODULE_2__ng2newslist_component__["a" /* Ng2NewsListComponent */]]
+    })
+], Ng2NewsList);
+
+//# sourceMappingURL=ng2newslist.module.js.map
+
+/***/ }),
+
 /***/ "../../../../chart.js/src/chart.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29350,6 +29454,81 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 __export(__webpack_require__("../../../../ng2-charts/charts/charts.js"));
+
+
+/***/ }),
+
+/***/ "../../../../ng2-timeline/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ng2Timeline; });
+
+
+
+/**
+ * Created by mohma on 7/31/2017.
+ */
+var Ng2TimelineComponent = (function () {
+    function Ng2TimelineComponent() {
+    }
+    /**
+     * @param {?} index
+     * @return {?}
+     */
+    Ng2TimelineComponent.prototype.onClick = function (index) {
+        if (this.listener) {
+            if (this.listener(this.items[index])) {
+                this.items[index]['complete'] = !this.items[index]['complete'];
+            }
+        }
+    };
+    /**
+     * @return {?}
+     */
+    Ng2TimelineComponent.prototype.ngOnInit = function () {
+    };
+    return Ng2TimelineComponent;
+}());
+Ng2TimelineComponent.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
+                selector: 'ng2-timeline',
+                template: "<ul class=\"timeline\"> <li *ngFor=\"let item of items; index as i\"> <a href=\"javascript:void(0)\" (click)=\"onClick(i)\"> <div class=\"timeline-badge {{item['complete']?'primary':''}}\" [innerHTML]=\"item['icon']\"> </div> </a> <div class=\"timeline-panel {{item['complete']?'completedEvent':''}}\"> <div class=\"timeline-heading\"> <h4 class=\"timeline-title\">{{item['title']}}</h4> </div> <div class=\"timeline-body\"> <p>{{item['content']}}</p> </div> </div> </li> </ul> ",
+                styles: [".timeline { list-style: none; padding: 20px 0 20px; position: relative; } .timeline:before { top: 0; bottom: 0; position: absolute; content: \" \"; width: 2px; background-color: #e9ecf2; left: 25px; margin-right: -1.5px; } .timeline > li { margin-bottom: 20px; position: relative; box-sizing: border-box; } .timeline > li:before, .timeline > li:after { content: \" \"; display: table; } .timeline > li > a > .timeline-badge { color: #fff; width: 46px; height: 46px; line-height: 51px; font-size: 1.4em; text-align: center; position: absolute; top: 16px; left: 0px; margin-right: -25px; background-color: #999999; z-index: 100; border-radius: 9999px; } .timeline > li > .timeline-panel { width: calc( 100% - 65px); float: right; border: 1px solid #edeeed; border-radius: 2px; padding: 10px 20px; position: relative; box-shadow: none; } .timeline > li:after { clear: both; } .timeline-badge.primary { background-color: #30a5ff !important; } .completedEvent { text-decoration: line-through; } "]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+Ng2TimelineComponent.ctorParameters = function () { return []; };
+Ng2TimelineComponent.propDecorators = {
+    'items': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"], args: ['data',] },],
+    'listener': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"], args: ['completeListener',] },],
+};
+
+var Ng2Timeline = (function () {
+    function Ng2Timeline() {
+    }
+    return Ng2Timeline;
+}());
+Ng2Timeline.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
+                imports: [
+                    __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"]
+                ],
+                declarations: [Ng2TimelineComponent],
+                providers: [],
+                exports: [Ng2TimelineComponent]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+Ng2Timeline.ctorParameters = function () { return []; };
+
+
 
 
 /***/ }),

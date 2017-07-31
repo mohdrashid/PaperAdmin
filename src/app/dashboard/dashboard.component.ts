@@ -11,6 +11,8 @@ import {PieChart} from "../components/pieChart/pieChart";
   styleUrls:['./dashboard.scss']
 })
 export class DashboardComponent implements OnInit{
+
+
   public chartHeight=35;
 
   public ChartOptions:any = {
@@ -19,8 +21,36 @@ export class DashboardComponent implements OnInit{
     mainAspectRatio:false
   };
 
-  ngOnInit(): void {
+  //Timeline Related
+  public completeListener(item){
+    console.log(item);
+    return true;
+  }
+  public timelineData:Array<Object> =[
+    {
+      title:"Step 1",
+      icon:'<i class="fa fa-home"></i>',
+      content:"Hello World",
+      complete:true
+    },
+    {
+      title:"Step 2",
+      icon:'<i class="fa fa-pencil"></i>',
+      content:"Welcome World",
+      complete:false
+    }
+  ];
 
+  ngOnInit(): void {
+    let self=this;
+    setTimeout(function(){
+      self.timelineData.push({
+        title:"Step 3",
+        icon:'<i class="fa fa-remove"></i>',
+        content:"Bye World",
+        complete:false
+      });
+    },5000);
   }
 
   //Card
@@ -54,6 +84,31 @@ export class DashboardComponent implements OnInit{
   public chartHovered(e:any):void {
     console.log(e);
   }
+
+  //News Component
+  public newsList:Array<Object> =[
+    {
+      large:"30",
+      small:"Jun",
+      link:"http://www.aebiss.com",
+      title:"AEBISS",
+      content:"Fullstack development, IoT, Blockchain related services in the U.A.E"
+    },
+    {
+      large:"1",
+      small:"Jul",
+      link:"http://www.tayar.ae",
+      title:"Tayar",
+      content:"One device that let you control any electrical device at home"
+    },
+    {
+      large:"1",
+      small:"Jul",
+      link:"http://www.wavex.io",
+      title:"WaveX",
+      content:"Blockchain based electricity trading platform"
+    }
+  ]
 }
 
 

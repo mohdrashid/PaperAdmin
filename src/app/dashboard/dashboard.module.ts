@@ -12,6 +12,8 @@ import { ChartsModule } from 'ng2-charts';
 import {RoundProgressModule} from "angular-svg-round-progressbar";
 import {PieChartComponent} from "../components/pieChart/pieChart.component";
 import {CommonModule} from "@angular/common";
+import {Ng2Timeline} from 'ng2-timeline';
+import {Ng2NewsList} from "../components/ng2-newslist/ng2newslist.module";
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import {CommonModule} from "@angular/common";
     HttpModule,
     ChartsModule,
     RoundProgressModule,
-    CommonModule
+    CommonModule,
+    Ng2Timeline,
+    Ng2NewsList
   ],
   declarations: [ DashboardComponent, StatsCardComponent,PieChartComponent],
   providers: [ DashboardService ]

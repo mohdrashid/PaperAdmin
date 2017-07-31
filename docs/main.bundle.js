@@ -131,7 +131,7 @@ AppModule = __decorate([
         ],
         providers: [{
                 provide: __WEBPACK_IMPORTED_MODULE_2__angular_common__["LocationStrategy"],
-                useClass: __WEBPACK_IMPORTED_MODULE_2__angular_common__["PathLocationStrategy"]
+                useClass: __WEBPACK_IMPORTED_MODULE_2__angular_common__["HashLocationStrategy"]
             }],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
     })

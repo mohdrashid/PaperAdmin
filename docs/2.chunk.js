@@ -3,7 +3,7 @@ webpackJsonp([2],{
 /***/ "../../../../../src/app/components/pieChart/pieChart.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"panel panel-default\">\r\n  <div class=\"panel-body easypiechart-panel\">\r\n    <h4>{{properties['label']}}</h4>\r\n    <div class=\"progressBarText\">\r\n      {{((properties['current']/properties['max'])*100).toFixed(1)}}%\r\n    </div>\r\n    <div class=\"progressive-pieChart\">\r\n      <round-progress\r\n        [current]=\"properties['current']\"\r\n        [max]=\"properties['max']\"\r\n        [color]=\"properties['color']\"\r\n        [background]=\"'#eaeaea'\"\r\n        [radius]=100\r\n        [stroke]=\"7\"\r\n        [semicircle]=\"false\"\r\n        [rounded]=\"true\"\r\n        [clockwise]=\"true\"\r\n        [responsive]=\"true\"\r\n        [duration]=\"800\"\r\n        [animation]=\"'easeInOutQuart'\"\r\n        [animationDelay]=\"100\"\r\n      ></round-progress>\r\n    </div>      </div>\r\n</div>\r\n"
+module.exports = "\r\n<div class=\"panel panel-default\">\r\n  <div class=\"panel-body easypiechart-panel\">\r\n    <h4>{{properties['label']}}</h4>\r\n    <div class=\"progressBarText\" [style.color]=\"properties['color']\">\r\n      {{((properties['current']/properties['max'])*100).toPrecision(3)}}%\r\n    </div>\r\n    <div class=\"progressive-pieChart\">\r\n      <round-progress\r\n        [current]=\"properties['current']\"\r\n        [max]=\"properties['max']\"\r\n        [color]=\"properties['color']\"\r\n        [background]=\"'#eaeaea'\"\r\n        [radius]=100\r\n        [stroke]=\"7\"\r\n        [semicircle]=\"false\"\r\n        [rounded]=\"true\"\r\n        [clockwise]=\"true\"\r\n        [responsive]=\"true\"\r\n        [duration]=\"800\"\r\n        [animation]=\"'easeInOutQuart'\"\r\n        [animationDelay]=\"100\"\r\n      ></round-progress>\r\n    </div>      </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -63,7 +63,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".progressBarText {\n  position: absolute;\n  color: #bbb;\n  font-weight: 100;\n  line-height: 1;\n  top: 52%;\n  bottom: auto;\n  left: 50%;\n  -webkit-transform: translateY(-50%) translateX(-50%);\n          transform: translateY(-50%) translateX(-50%);\n  font-size: 2.7rem;\n  padding-top: 10px; }\n\n.progressive-pieChart {\n  padding: 30px; }\n\n@media only screen and (max-width: 480px) {\n  .progressBarText {\n    font-size: 0.8rem; } }\n\n@media only screen and (min-width: 480px) and (max-width: 600px) {\n  .progressBarText {\n    font-size: 3.6rem; } }\n\n@media only screen and (min-width: 600px) and (max-width: 768px) {\n  .progressBarText {\n    font-size: 5rem; } }\n\n@media only screen and (min-width: 768px) and (max-width: 992px) {\n  .progressBarText {\n    font-size: 4.2rem; } }\n\n@media only screen and (min-width: 992px) and (max-width: 1382px) {\n  .progressBarText {\n    font-size: 2.3rem; } }\n\n@media only screen and (min-width: 1382px) {\n  .progressBarText {\n    font-size: 4rem; } }\n", ""]);
+exports.push([module.i, ".progressBarText {\n  position: absolute;\n  color: #bbb;\n  font-weight: 100;\n  line-height: 1;\n  top: 52%;\n  bottom: auto;\n  left: 50%;\n  -webkit-transform: translateY(-50%) translateX(-50%);\n          transform: translateY(-50%) translateX(-50%);\n  font-size: 2.7rem;\n  padding-top: 10px;\n  padding-left: 7.5px; }\n\n.progressive-pieChart {\n  padding: 30px; }\n\n@media only screen and (max-width: 380px) {\n  .progressBarText {\n    font-size: 2rem; } }\n\n@media only screen and (min-width: 480px) and (max-width: 600px) {\n  .progressBarText {\n    font-size: 3.6rem; } }\n\n@media only screen and (min-width: 600px) and (max-width: 768px) {\n  .progressBarText {\n    font-size: 5rem; } }\n\n@media only screen and (min-width: 768px) and (max-width: 992px) {\n  .progressBarText {\n    font-size: 4.2rem; } }\n\n@media only screen and (min-width: 992px) and (max-width: 1382px) {\n  .progressBarText {\n    font-size: 2.3rem; } }\n\n@media only screen and (min-width: 1382px) {\n  .progressBarText {\n    font-size: 4.5rem; } }\n", ""]);
 
 // exports
 
@@ -209,7 +209,7 @@ DashboardRoutingModule = __decorate([
 /***/ "../../../../../src/app/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-xs-12 col-md-6 col-sm-12 col-lg-3\">\r\n    <statsCard [data]=\"card1\"></statsCard>\r\n  </div>\r\n  <div class=\"col-xs-12 col-md-6 col-lg-3\">\r\n    <statsCard [data]=\"card2\"></statsCard>\r\n  </div>\r\n  <div class=\"col-xs-12 col-md-6 col-lg-3\">\r\n    <statsCard [data]=\"card3\"></statsCard>\r\n  </div>\r\n  <div class=\"col-xs-12 col-md-6 col-lg-3\">\r\n    <statsCard [data]=\"card4\"></statsCard>\r\n  </div>\r\n</div><!--/.row-->\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12\">\r\n    <div class=\"panel panel-default\">\r\n      <div class=\"panel-heading\">Site Traffic Overview</div>\r\n      <div class=\"panel-body\">\r\n        <div class=\"canvas-wrapper\" >\r\n          <canvas baseChart style=\"width: 791px; height: 263px;\" width=\"1582\" height=\"500\"\r\n                  [datasets]=\"lineChartData\"\r\n                  [labels]=\"lineChartLabels\"\r\n                  [chartType]=\"lineChartType\"\r\n                  (chartHover)=\"chartHovered($event)\"\r\n                  (chartClick)=\"chartClicked($event)\"\r\n          ></canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div><!--/.row-->\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-xs-6 col-md-3\">\r\n    <pieChart [data]=\"pbar1\"></pieChart>\r\n  </div>\r\n  <div class=\"col-xs-6 col-md-3\">\r\n    <pieChart [data]=\"pbar2\"></pieChart>\r\n  </div>\r\n  <div class=\"col-xs-6 col-md-3\">\r\n    <pieChart [data]=\"pbar3\"></pieChart>\r\n  </div>\r\n  <div class=\"col-xs-6 col-md-3\">\r\n    <pieChart [data]=\"pbar4\"></pieChart>\r\n  </div>\r\n\r\n</div><!--/.row-->\r\n\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-xs-12 col-md-6 col-sm-12 col-lg-3\">\r\n    <statsCard [data]=\"card1\"></statsCard>\r\n  </div>\r\n  <div class=\"col-xs-12 col-md-6 col-lg-3\">\r\n    <statsCard [data]=\"card2\"></statsCard>\r\n  </div>\r\n  <div class=\"col-xs-12 col-md-6 col-lg-3\">\r\n    <statsCard [data]=\"card3\"></statsCard>\r\n  </div>\r\n  <div class=\"col-xs-12 col-md-6 col-lg-3\">\r\n    <statsCard [data]=\"card4\"></statsCard>\r\n  </div>\r\n</div><!--/.row-->\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12\">\r\n    <div class=\"panel panel-default\">\r\n      <div class=\"panel-heading\">Site Traffic Overview</div>\r\n      <div class=\"panel-body\">\r\n        <div class=\"canvas-wrapper\" >\r\n          <canvas baseChart style=\"min-height: 300px;width: 100%; height: 50vh\"\r\n                  [options]=\"ChartOptions\"\r\n                  [datasets]=\"lineChartData\"\r\n                  [labels]=\"lineChartLabels\"\r\n                  [chartType]=\"lineChartType\"\r\n                  (chartHover)=\"chartHovered($event)\"\r\n                  (chartClick)=\"chartClicked($event)\"\r\n          ></canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div><!--/.row-->\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-xs-6 col-md-3\">\r\n    <pieChart [data]=\"pbar1\"></pieChart>\r\n  </div>\r\n  <div class=\"col-xs-6 col-md-3\">\r\n    <pieChart [data]=\"pbar2\"></pieChart>\r\n  </div>\r\n  <div class=\"col-xs-6 col-md-3\">\r\n    <pieChart [data]=\"pbar3\"></pieChart>\r\n  </div>\r\n  <div class=\"col-xs-6 col-md-3\">\r\n    <pieChart [data]=\"pbar4\"></pieChart>\r\n  </div>\r\n\r\n</div><!--/.row-->\r\n<div class=\"row\">\r\n  <div class=\"col-md-6\">\r\n    <div class=\"panel panel-default \">\r\n      <div class=\"panel-heading\">\r\n        Timeline\r\n      </div>\r\n\r\n      <div class=\"panel-body timeline-container\">\r\n        <ng2-timeline [completeListener]=\"completeListener\" [data]=\"timelineData\"></ng2-timeline>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <div class=\"panel panel-default articles\">\r\n      <div class=\"panel-heading\">\r\n        Latest News\r\n      </div>\r\n      <div class=\"panel-body articles-container\">\r\n        <ng2-news-list [data]=\"newsList\"></ng2-news-list>\r\n      </div>\r\n    </div><!--End .articles-->\r\n  </div>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -225,15 +225,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 /**
  * Created by mohma on 7/26/2017.
  */
 
 var DashboardComponent = (function () {
     function DashboardComponent() {
+        this.chartHeight = 35;
+        this.ChartOptions = {
+            scaleShowVerticalLines: false,
+            responsive: true,
+            mainAspectRatio: false
+        };
+        this.timelineData = [
+            {
+                title: "Step 1",
+                icon: '<i class="fa fa-home"></i>',
+                content: "Hello World",
+                complete: true
+            },
+            {
+                title: "Step 2",
+                icon: '<i class="fa fa-pencil"></i>',
+                content: "Welcome World",
+                complete: false
+            }
+        ];
         //Card
         this.card1 = { color: "#1ebfae", icon: "fa-users", label: "Users", data: 50 };
         this.card2 = { color: "#30a5ff", icon: "fa-cogs", label: "Items", data: 80 };
@@ -242,8 +259,8 @@ var DashboardComponent = (function () {
         //ProgressBars
         this.pbar1 = { color: "#1ebfae", max: 100, label: "Load", current: 2 };
         this.pbar2 = { color: "#30a5ff", max: 100, label: "Traffic", current: 20 };
-        this.pbar3 = { color: "#ffb53e", max: 100, label: "Traffic", current: 50 };
-        this.pbar4 = { color: "#f9243f", max: 100, label: "Traffic", current: 57 };
+        this.pbar3 = { color: "#ffb53e", max: 100, label: "Users", current: 50 };
+        this.pbar4 = { color: "#f9243f", max: 100, label: "RAM", current: 57 };
         // lineChart
         this.lineChartData = [
             { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
@@ -251,7 +268,47 @@ var DashboardComponent = (function () {
         ];
         this.lineChartLabels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
         this.lineChartType = 'line';
+        //News Component
+        this.newsList = [
+            {
+                large: "30",
+                small: "Jun",
+                link: "http://www.aebiss.com",
+                title: "AEBISS",
+                content: "Fullstack development, IoT, Blockchain related services in the U.A.E"
+            },
+            {
+                large: "1",
+                small: "Jul",
+                link: "http://www.tayar.ae",
+                title: "Tayar",
+                content: "One device that let you control any electrical device at home"
+            },
+            {
+                large: "1",
+                small: "Jul",
+                link: "http://www.wavex.io",
+                title: "WaveX",
+                content: "Blockchain based electricity trading platform"
+            }
+        ];
     }
+    //Timeline Related
+    DashboardComponent.prototype.completeListener = function (item) {
+        console.log(item);
+        return true;
+    };
+    DashboardComponent.prototype.ngOnInit = function () {
+        var self = this;
+        setTimeout(function () {
+            self.timelineData.push({
+                title: "Step 3",
+                icon: '<i class="fa fa-remove"></i>',
+                content: "Bye World",
+                complete: false
+            });
+        }, 5000);
+    };
     // events
     DashboardComponent.prototype.chartClicked = function (e) {
         console.log(e);
@@ -264,9 +321,9 @@ var DashboardComponent = (function () {
 DashboardComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         template: __webpack_require__("../../../../../src/app/dashboard/dashboard.component.html"),
-        selector: 'dashboard'
-    }),
-    __metadata("design:paramtypes", [])
+        selector: 'dashboard',
+        styles: [__webpack_require__("../../../../../src/app/dashboard/dashboard.scss")]
+    })
 ], DashboardComponent);
 
 //# sourceMappingURL=dashboard.component.js.map
@@ -291,6 +348,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular_svg_round_progressbar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_angular_svg_round_progressbar__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_pieChart_pieChart_component__ = __webpack_require__("../../../../../src/app/components/pieChart/pieChart.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ng2_timeline__ = __webpack_require__("../../../../ng2-timeline/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_ng2_newslist_ng2newslist_module__ = __webpack_require__("../../../../../src/app/components/ng2-newslist/ng2newslist.module.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardModule", function() { return DashboardModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -301,6 +360,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 /**
  * Created by mohma on 7/26/2017.
  */
+
+
 
 
 
@@ -326,7 +387,9 @@ DashboardModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["e" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_7_ng2_charts__["ChartsModule"],
             __WEBPACK_IMPORTED_MODULE_8_angular_svg_round_progressbar__["RoundProgressModule"],
-            __WEBPACK_IMPORTED_MODULE_10__angular_common__["CommonModule"]
+            __WEBPACK_IMPORTED_MODULE_10__angular_common__["CommonModule"],
+            __WEBPACK_IMPORTED_MODULE_11_ng2_timeline__["a" /* Ng2Timeline */],
+            __WEBPACK_IMPORTED_MODULE_12__components_ng2_newslist_ng2newslist_module__["a" /* Ng2NewsList */]
         ],
         declarations: [__WEBPACK_IMPORTED_MODULE_3__dashboard_component__["a" /* DashboardComponent */], __WEBPACK_IMPORTED_MODULE_6__components_statsCard_statsCard_component__["a" /* StatsCardComponent */], __WEBPACK_IMPORTED_MODULE_9__components_pieChart_pieChart_component__["a" /* PieChartComponent */]],
         providers: [__WEBPACK_IMPORTED_MODULE_4__dashboard_service__["a" /* DashboardService */]]
@@ -334,6 +397,24 @@ DashboardModule = __decorate([
 ], DashboardModule);
 
 //# sourceMappingURL=dashboard.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/dashboard/dashboard.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".responsiveChart {\n  min-height: 300px !important;\n  width: 100% !important;\n  height: 50vh !important; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
 
 /***/ }),
 

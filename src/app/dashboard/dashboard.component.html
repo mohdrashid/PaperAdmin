@@ -48,4 +48,27 @@
   </div>
 
 </div><!--/.row-->
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default ">
+      <div class="panel-heading">
+        Timeline
+      </div>
+
+      <div class="panel-body timeline-container">
+        <ng2-timeline [completeListener]="completeListener" [data]="timelineData"></ng2-timeline>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default articles">
+      <div class="panel-heading">
+        Latest News
+      </div>
+      <div class="panel-body articles-container">
+        <ng2-news-list [data]="newsList"></ng2-news-list>
+      </div>
+    </div><!--End .articles-->
+  </div>
+</div>
 
