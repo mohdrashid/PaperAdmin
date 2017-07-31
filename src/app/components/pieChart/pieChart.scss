@@ -7,6 +7,7 @@
   bottom: auto; left: 50%; transform: translateY(-50%) translateX(-50%);
   font-size: 2.7rem;
   padding-top: 10px;
+  padding-left: 7.5px;
 }
 
 .progressive-pieChart{
@@ -14,9 +15,9 @@
 }
 
 // Little larger screen
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 380px){
   .progressBarText {
-    font-size: 0.8rem;
+    font-size: 2rem;
   }
 }
 

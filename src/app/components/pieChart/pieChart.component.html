@@ -2,8 +2,8 @@
 <div class="panel panel-default">
   <div class="panel-body easypiechart-panel">
     <h4>{{properties['label']}}</h4>
-    <div class="progressBarText">
-      {{((properties['current']/properties['max'])*100).toFixed(1)}}%
+    <div class="progressBarText" [style.color]="properties['color']">
+      {{((properties['current']/properties['max'])*100).toPrecision(3)}}%
     </div>
     <div class="progressive-pieChart">
       <round-progress
