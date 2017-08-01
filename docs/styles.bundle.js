@@ -140,7 +140,7 @@ exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":fa
 exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/assets/css/font-awesome.min.css"), "");
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n\n.datepicker table{\n  width: 100% !important;\n}\n\ntable tr td, table th{\n  font-size:1.2rem !important;\n}\n\n.sidebar ul.nav ul.children li a.active {\n  color: #ececec !important;\n}\n\n.todo-list-item{\n  list-style: none;\n}\n\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n\n.datepicker table{\n  width: 100% !important;\n}\n\ntable tr td, table th{\n  font-size:1.2rem !important;\n}\n\n.sidebar ul.nav ul.children li a.active {\n  color: #ececec !important;\n}\n\n.todo-list-item{\n  list-style: none;\n}\n.text-white{\n  color:white !important;\n}\n", ""]);
 
 // exports
 

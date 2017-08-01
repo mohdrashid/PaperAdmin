@@ -236,7 +236,25 @@ AppRoutingModule = __decorate([
 /***/ "../../../../../src/app/layout/full-layout.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#sidebar-collapse\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" href=\"#\"><span>Paper </span>Admin</a>\n      <ul class=\"user-menu\">\n        <li class=\"dropdown pull-right\">\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n            User <span class=\"caret\"></span></a>\n          <ul class=\"dropdown-menu\" role=\"menu\">\n            <li><a href=\"#\"><i class=\"fa fa-fw fa-user\"></i> Profile</a></li>\n            <li><a href=\"#\"><i class=\"fa fa-fw fa-cogs\"></i> Settings</a></li>\n            <li><a href=\"#\"><i class=\"fa fa-fw fa-lock\"></i> Logout</a></li>\n          </ul>\n        </li>\n      </ul>\n    </div>\n  </div><!-- /.container-fluid -->\n</nav>\n\n<div id=\"sidebar-collapse\" class=\"col-sm-3 col-lg-2 sidebar\">\n  <form role=\"search\">\n    <div class=\"form-group\">\n      <input type=\"text\" class=\"form-control\" placeholder=\"Search\">\n    </div>\n  </form>\n  <ul class=\"nav menu\">\n    <li><a routerLinkActive=\"active\" [routerLink]=\"['/dashboard']\"><i class=\"fa fa-dashboard fa-fw\"></i> Dashboard</a></li>\n    <li><a routerLinkActive=\"active\" [routerLink]=\"['/form']\"><i class=\"fa fa-list fa-fw\"></i> Form</a></li>\n\n    <li class=\"parent \">\n      <a data-toggle=\"collapse\" href=\"#sub-item-1\">\n        <i class=\"fa fa-fw fa-chevron-circle-down\"></i> Widgets\n      </a>\n      <ul class=\"children collapse\" id=\"sub-item-1\">\n        <li>\n          <a routerLinkActive=\"active\" [routerLink]=\"['/widget/main']\">\n            <i class=\"fa fa-fw fa-cogs\"></i> Main\n          </a>\n        </li>\n        <li>\n          <a routerLinkActive=\"active\" [routerLink]=\"['/widget/table']\">\n            <i class=\"fa fa-fw fa-table\"></i> Table\n          </a>\n        </li>\n        <li>\n          <a routerLinkActive=\"active\" [routerLink]=\"['/widget/chart']\">\n            <i class=\"fa fa-fw fa-bar-chart\"></i> Charts\n          </a>\n        </li>\n      </ul>\n    </li>\n    <li role=\"presentation\" class=\"divider\"></li>\n    <li><a routerLinkActive=\"active\" [routerLink]=\"['/login']\"><i class=\"fa fa-user fa-fw\"></i> Login</a></li>\n    <li><a routerLinkActive=\"active\" [routerLink]=\"['/register']\"><i class=\"fa fa-users fa-fw\"></i> Register</a></li>\n\n  </ul>\n  <div class=\"attribution\">Angular JS 2/4 Dashboard by\n    <a href=\"https://github.com/mohdrashid\">@mohdrashid</a><br/>\n    CSS by <a href=\"http://www.medialoot.com/item/lumino-admin-bootstrap-template/\">Medialoot</a>\n    \n  </div>\n</div><!--/.sidebar-->\n<div class=\"col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main\">\n  <!-- Main content -->\n  <div class=\"row\">\n    <ng2-auto-breadcrumb></ng2-auto-breadcrumb>\n  </div><!--/.row-->\n\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#sidebar-collapse\" (click)=\"toggle()\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <i class=\"fa {{toggleBarIcon?'fa-bars':'fa-remove'}} text-white custom-nav-toggle\"></i>\n      </button>\n      <a class=\"navbar-brand\" href=\"#\"><span>Paper </span>Admin</a>\n      <ul class=\"user-menu\">\n        <li class=\"dropdown pull-right\">\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n            User <span class=\"caret\"></span></a>\n          <ul class=\"dropdown-menu\" role=\"menu\">\n            <li><a href=\"#\"><i class=\"fa fa-fw fa-user\"></i> Profile</a></li>\n            <li><a href=\"#\"><i class=\"fa fa-fw fa-cogs\"></i> Settings</a></li>\n            <li><a href=\"#\"><i class=\"fa fa-fw fa-lock\"></i> Logout</a></li>\n          </ul>\n        </li>\n      </ul>\n    </div>\n  </div><!-- /.container-fluid -->\n</nav>\n\n<div id=\"sidebar-collapse\" class=\"col-sm-3 col-lg-2 sidebar\">\n  <form role=\"search\">\n    <div class=\"form-group\">\n      <input type=\"text\" class=\"form-control\" placeholder=\"Search\">\n    </div>\n  </form>\n  <ul class=\"nav menu\">\n    <li><a routerLinkActive=\"active\" [routerLink]=\"['/dashboard']\"><i class=\"fa fa-dashboard fa-fw\"></i> Dashboard</a></li>\n    <li><a routerLinkActive=\"active\" [routerLink]=\"['/form']\"><i class=\"fa fa-list fa-fw\"></i> Form</a></li>\n\n    <li class=\"parent \">\n      <a data-toggle=\"collapse\" href=\"#sub-item-1\">\n        <i class=\"fa fa-fw fa-chevron-circle-down\"></i> Widgets\n      </a>\n      <ul class=\"children collapse\" id=\"sub-item-1\">\n        <li>\n          <a routerLinkActive=\"active\" [routerLink]=\"['/widget/main']\">\n            <i class=\"fa fa-fw fa-cogs\"></i> Main\n          </a>\n        </li>\n        <li>\n          <a routerLinkActive=\"active\" [routerLink]=\"['/widget/table']\">\n            <i class=\"fa fa-fw fa-table\"></i> Table\n          </a>\n        </li>\n        <li>\n          <a routerLinkActive=\"active\" [routerLink]=\"['/widget/chart']\">\n            <i class=\"fa fa-fw fa-bar-chart\"></i> Charts\n          </a>\n        </li>\n      </ul>\n    </li>\n    <li role=\"presentation\" class=\"divider\"></li>\n    <li><a routerLinkActive=\"active\" [routerLink]=\"['/login']\"><i class=\"fa fa-user fa-fw\"></i> Login</a></li>\n    <li><a routerLinkActive=\"active\" [routerLink]=\"['/register']\"><i class=\"fa fa-users fa-fw\"></i> Register</a></li>\n\n  </ul>\n  <div class=\"attribution\">Angular JS 2/4 Dashboard by\n    <a href=\"https://github.com/mohdrashid\">@mohdrashid</a><br/>\n    CSS by <a href=\"http://www.medialoot.com/item/lumino-admin-bootstrap-template/\">Medialoot</a>\n\n  </div>\n</div><!--/.sidebar-->\n<div class=\"col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main\">\n  <!-- Main content -->\n  <div class=\"row\">\n    <ng2-auto-breadcrumb></ng2-auto-breadcrumb>\n  </div><!--/.row-->\n\n  <router-outlet></router-outlet>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/layout/full-layout.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "@media only screen and (max-width: 480px) {\n  .attribution {\n    position: relative; }\n  .sidebar {\n    position: fixed;\n    /* Set the navbar to fixed position */\n    top: 50px;\n    /* Position the navbar at the top of the page */\n    width: 100%;\n    z-index: 1;\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); } }\n\n.navbar-toggle {\n  padding: initial !important; }\n\n.custom-nav-toggle {\n  padding: 5px 15px 5px 15px;\n  font-size: 20px; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
 
 /***/ }),
 
@@ -258,13 +276,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var FullLayoutComponent = (function () {
     function FullLayoutComponent() {
+        this.toggleBarIcon = true;
     }
+    FullLayoutComponent.prototype.toggle = function () {
+        var self = this;
+        setTimeout(function () {
+            self.toggleBarIcon = !self.toggleBarIcon;
+        }, 500);
+    };
     return FullLayoutComponent;
 }());
 FullLayoutComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-dashboard',
-        template: __webpack_require__("../../../../../src/app/layout/full-layout.component.html")
+        template: __webpack_require__("../../../../../src/app/layout/full-layout.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/layout/full-layout.component.scss")]
     }),
     __metadata("design:paramtypes", [])
 ], FullLayoutComponent);

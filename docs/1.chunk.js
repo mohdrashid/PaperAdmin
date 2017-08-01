@@ -1,5 +1,23 @@
 webpackJsonp([1],{
 
+/***/ "../../../../../src/app/widgets/tables/table.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".overflowFix {\n  overflow: auto; }\n\n.overflowFix > table {\n  width: 100%; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
 /***/ "../../../../../src/app/widgets/tables/tables-routing.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -109,7 +127,6 @@ var TableWidgetComponent = (function () {
                 username: "Antonette",
                 email: "Shanna@melissa.tv"
             },
-            // ... list of items
             {
                 id: 11,
                 name: "Nicholas DuBuque",
@@ -123,7 +140,8 @@ var TableWidgetComponent = (function () {
 TableWidgetComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         template: __webpack_require__("../../../../../src/app/widgets/tables/tables.html"),
-        selector: 'widget-table'
+        selector: 'widget-table',
+        styles: [__webpack_require__("../../../../../src/app/widgets/tables/table.scss")]
     }),
     __metadata("design:paramtypes", [])
 ], TableWidgetComponent);
@@ -135,7 +153,7 @@ TableWidgetComponent = __decorate([
 /***/ "../../../../../src/app/widgets/tables/tables.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-lg-12\">\r\n    <h1 class=\"page-header\">Table</h1>\r\n  </div>\r\n</div><!--/.row-->\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-sm-12\">\r\n    <div class=\"panel panel-default\">\r\n      <div class=\"panel-body\">\r\n        <ng2-smart-table [settings]=\"settings\" [source]=\"data\"></ng2-smart-table>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div><!--/.row-->\r\n\r\n\r\n\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-lg-12\">\r\n    <h1 class=\"page-header\">Table</h1>\r\n  </div>\r\n</div><!--/.row-->\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-sm-12\">\r\n    <div class=\"panel panel-default\">\r\n      <div class=\"panel-body overflowFix\">\r\n        <ng2-smart-table [settings]=\"settings\" [source]=\"data\"></ng2-smart-table>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div><!--/.row-->\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
