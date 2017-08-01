@@ -19,4 +19,6 @@ table tr td, table th{
 .todo-list-item{
   list-style: none;
 }
-
+.text-white{
+  color:white !important;
+}

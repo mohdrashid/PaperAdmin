@@ -1,13 +1,15 @@
 /**
  * Created by mohma on 7/26/2017.
  */
-import { Component } from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 
 @Component({
   templateUrl: './tables.html',
-  selector:'widget-table'
+  selector:'widget-table',
+  styleUrls:['./table.scss']
 })
-export class TableWidgetComponent {
+export class TableWidgetComponent{
+
 
   public successColor="#8ad919";
   public warningCOlor="#ffb53e";
@@ -20,7 +22,6 @@ export class TableWidgetComponent {
       edit: true,
       delete: true
     },
-
     columns: {
       id: {
         title: 'ID',
@@ -54,9 +55,6 @@ export class TableWidgetComponent {
       username: "Antonette",
       email: "Shanna@melissa.tv"
     },
-
-    // ... list of items
-
     {
       id: 11,
       name: "Nicholas DuBuque",
@@ -67,6 +65,8 @@ export class TableWidgetComponent {
 
   constructor() {
   }
+
+
 }
 
 
