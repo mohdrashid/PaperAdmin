@@ -63,26 +63,44 @@ export class MainWidgetComponent {
   ]
 
   public listView:Ng2ListViewCRUDProperty= {
-    label: "CRUD ListView",
-    icon: "fa fa-list",
-    color: "#ffb53e",
-    onDelete: function (value) {
-      console.log("Deleting Value: " + value);
+    add:true,//Adding possible
+    remove:true,//Removing elements possible
+    edit:true,//editing possible
+    dataIsObject:true,
+    path:["name","first"],
+    label:"CRUD ListView",
+    headingBackgroundColor:"#3752ff",
+    headingFontColor:"#ececec",
+    icon:"fa fa-cogs",
+    onDelete:function(value){
+      console.log("Deleting Value: "+JSON.stringify(value));
       return true;
     },
-    onUpdate: function (value) {
-      console.log("Editing Value: " + value);
+    onUpdate:function(value,newValue){
+      console.log("Editing Value: "+JSON.stringify(value)+" New Value:"+newValue);
       return true;
     },
-    onSearch: function () {
+    onSearch:function(value){
+      console.log(value)
     },
-    onAdd: function (value) {
-      console.log("Adding Value: " + value);
+    onAdd:function(value){
+      console.log("Adding Value: "+JSON.stringify(value));
       return true;
+    },
+    onSelect:function(value){
+      console.log(JSON.stringify(value));
+    },
+    onSearchChange:function(value){
+      console.log(value)
     }
   };
 
-  public listItems:Array<Object>=["Apple","Orange","Banana","Grapes"];
+  //In this specific example the field name.first is displayed in the list
+  public listItems:Array<Object>=
+    [
+      {name:{first:"Hello",last:"World"},count:2},
+      {name:{first:"Hello2",last:"World"},count:2}
+    ];
 
   constructor() {
     let self=this;
@@ -95,6 +113,45 @@ export class MainWidgetComponent {
       });
     },5000);
   }
+
+  public arraysListViewProperty:Ng2ListViewCRUDProperty= {
+    add:true,//Adding possible
+    remove:true,//Removing elements possible
+    edit:true,//editing possible
+    dataIsObject:false,
+    path:[],
+    label:"CRUD ListView with Arrays",
+    headingBackgroundColor:"#3752ff",
+    headingFontColor:"#ececec",
+    icon:"fa fa-cogs",
+    onDelete:function(value){
+      console.log("Deleting Value: "+JSON.stringify(value));
+      return true;
+    },
+    onUpdate:function(value,newValue){
+      console.log("Editing Value: "+JSON.stringify(value)+" New Value:"+newValue);
+      return true;
+    },
+    onSearch:function(value){
+      console.log(value)
+    },
+    onAdd:function(value){
+      console.log("Adding Value: "+JSON.stringify(value));
+      return true;
+    },
+    onSelect:function(value){
+      console.log(JSON.stringify(value));
+    },
+    onSearchChange:function(value){
+      console.log(value)
+    }
+  };
+
+  //In this specific example the field name.first is displayed in the list
+  public crudArray:Array<Object>=
+    [
+      "Apple","Orange","Banana"
+    ];
 }
 
 
